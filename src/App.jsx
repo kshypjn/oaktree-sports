@@ -193,43 +193,43 @@ function App() {
         </section>
         <section className="services md:pt-10 flex flex-col md:mx-10 justify-center items-center">
           <h1 className= 'selection:text-orange-400 selection:bg-black title md:mx-10 my-4 text-2xl font-light leading-snug md:leading-none tracking-wide font-yes text-center text-purple-600 md:text-5xl lg:text-6xl '>What We Can Do For You</h1>
-          <div className='flex flex-col justify-center items-center gap-4 my-3 md:flex-row  md:gap-6 md:my-8'>
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img className="w-1/2 mx-auto" src="src/assets/video.png" alt=""/>
-            <div className="px-2 py-2">
-              <div className="font-bold text-center text-xl mb-2">Content Production</div>
-              <p className="text-gray-700 text-center text-base">
-              Podcasts, Videos, Shows - We Create It All!
-              </p>
+          <div className='grid grid-cols-2 grid-rows-2 gap-6 my-8'>
+            <div className="max-w-sm rounded overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-110">
+              <img className="w-1/4 mx-auto" src="src/assets/video.png" alt=""/>
+              <div className="px-2 py-2">
+                <div className="font-bold text-center text-xl mb-2">Content Production</div>
+                <p className="text-gray-700 text-center text-base">
+                Podcasts, Videos, Shows - We Create It All!
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img className="w-1/2 mx-auto" src="src/assets/bulbMain.png" alt=""/>
-            <div className="px-2 py-2">
-              <div className="font-bold text-center text-xl mb-2">Media Conceptualisation</div>
-              <p className="text-gray-700 text-center text-base">
-              Creative ideas to fuel sports content in India.
-              </p>
+            <div className="max-w-sm rounded overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-110">
+              <img className="w-1/4 mx-auto" src="src/assets/bulbMain.png" alt=""/>
+              <div className="px-2 py-2">
+                <div className="font-bold text-center text-xl mb-2">Media Conceptualisation</div>
+                <p className="text-gray-700 text-center text-base">
+                Creative ideas to fuel sports content in India.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img className="w-1/2 mx-auto" src="src/assets/chat.png" alt=""/>
-            <div className="px-2 py-2">
-              <div className="font-bold text-center text-xl mb-2">Branded Content</div>
-              <p className="text-gray-700 text-center text-base">
-              We partner with brands to create content that reflects their ideologies
-              </p>
+            <div className="max-w-sm rounded overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-110">
+              <img className="w-1/4 mx-auto" src="src/assets/chat.png" alt=""/>
+              <div className="px-2 py-2">
+                <div className="font-bold text-center text-xl mb-2">Branded Content</div>
+                <p className="text-gray-700 text-center text-base">
+                We partner with brands to create content that reflects their ideologies
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <img className="w-1/2 mx-auto" src="src/assets/puzzle.png" alt=""/>
-            <div className="px-2 py-2">
-              <div className="font-bold text-center text-xl mb-2">Content Consulting</div>
-              <p className="text-gray-700 text-center text-base">
-              Our team helps you tackle sports media demands
-              </p>
+            <div className="max-w-sm rounded overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-110">
+              <img className="w-1/4 mx-auto" src="src/assets/puzzle.png" alt=""/>
+              <div className="px-2 py-2">
+                <div className="font-bold text-center text-xl mb-2">Content Consulting</div>
+                <p className="text-gray-700 text-center text-base">
+                Our team helps you tackle sports media demands
+                </p>
+              </div>
             </div>
-          </div>
           </div>
 
         </section>

@@ -21,6 +21,9 @@ export default {
     },
     textColor:{
       'denim': "#002244"
+    },
+    scale:{
+      'small': "1.1"
     }
   },
   plugins: [],
