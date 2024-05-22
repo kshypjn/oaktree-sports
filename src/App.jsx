@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import SimpleSlider from './slider';
 import Thumbnail from './slider';
-
+import Modal from './modal';
 const navigation = [
   { name: 'Home', href: '#', current: true },
   { name: 'About Us', href: '#', current: false },
@@ -95,6 +95,30 @@ MobileMenu.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
+// const modalContent = {
+//   'bfc': {
+//     heading: 'Breakfast with Champions - A light breezy chat show with legends of Sports',
+//     videoSrc: 'https://youtube.com/playlist?list=PLR-r9ji4TnOUiF6Kq8JZUG_HTf061EfeZ&si=ICwy_mPYYTi4Xhk9',
+//   },
+//   'miss': {
+//     heading: 'Miss Field - An insight into the strong successful women behind the familiar faces',
+//     videoSrc: 'https://youtu.be/8zCjxyMfAP4?list=PLR-r9ji4TnOX99N1ihxuAZayBAir7g8x-',
+//   },
+  
+//   'plays': {
+//     heading: 'India plays - A series highlighting extraordinary sporting stories of ordinary people',
+//     videoSrc: 'https://youtube.com/playlist?list=PLR-r9ji4TnOX5a5jfdA6_kqwEUpsx700W&si=dmOqRlX9DLiiRnsg',
+//   },
+//   'yarns': {
+//     heading: '22 Yarns - A podcast for cricket lovers from all around the world',
+//     videoSrc: 'https://open.spotify.com/show/43mTFxSHXF7Xtvjx4TF0Dc?si=b64a3e79f50c4c07',
+//   },
+//   'gk': {
+//     heading: 'Quirky pre & post match reviews',
+//     videoSrc: 'https://youtube.com/playlist?list=PLR-r9ji4TnOXu16Q6__uB0VtCKV-lLzDX&si=odt5ZACc53Qzp58O',
+//   },
+//   // Add more video entries as needed
+// };
 function App() {
 //   const images = [
 //     {
@@ -115,6 +139,8 @@ function App() {
 // ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const [showModal,setShowModal] = useState(false);
+
   return (
     <div className="m-0">
       <nav id="shift" className="bg-white text-black p-4 flex mt-0 shadow-bx-sdw justify-between items-center py-6 px-10 text-lg">
@@ -191,10 +217,11 @@ function App() {
           <img src="src/assets/aboutImageMobile.svg" alt=""  className=' my-5 mb-2 sm:hidden'/>
           </div>
         </section>
+        {/* services */}
         <section className="services md:pt-10 flex flex-col md:mx-10 justify-center items-center">
-          <h1 className= 'selection:text-orange-400 selection:bg-black title md:mx-10 my-4 text-2xl font-light leading-snug md:leading-none tracking-wide font-yes text-center text-purple-600 md:text-5xl lg:text-6xl '>What We Can Do For You</h1>
-          <div className='grid grid-cols-2 grid-rows-2 gap-6 my-8'>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-110">
+          <h1 className= 'selection:text-orange-400 selection:bg-black title md:mx-10 my-4 mx-6 text-3xl font-light leading-snug md:leading-none tracking-wide font-yes text-center text-purple-600 md:text-5xl lg:text-6xl '>What We Can Do For You</h1>
+          <div className='grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 my-4 md:my-8'>
+            <div className=" w-fit mx-10 md:mx-2 md:mb-4 md:max-w-sm rounded overflow-hidden shadow-md shadow-purple-300 transition duration-500 ease-in-out transform md:hover:scale-small">
               <img className="w-1/4 mx-auto" src="src/assets/video.png" alt=""/>
               <div className="px-2 py-2">
                 <div className="font-bold text-center text-xl mb-2">Content Production</div>
@@ -203,7 +230,7 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-110">
+            <div className="md:max-w-sm mx-10 md:mx-2 md:mb-4 rounded overflow-hidden shadow-md  shadow-purple-300 transition duration-500 ease-in-out transform md:hover:scale-110">
               <img className="w-1/4 mx-auto" src="src/assets/bulbMain.png" alt=""/>
               <div className="px-2 py-2">
                 <div className="font-bold text-center text-xl mb-2">Media Conceptualisation</div>
@@ -212,7 +239,7 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-110">
+            <div className="md:max-w-sm mx-10 md:mx-2 md:mb-4 rounded overflow-hidden shadow-md  shadow-purple-300  transition duration-500 ease-in-out transform md:hover:scale-110">
               <img className="w-1/4 mx-auto" src="src/assets/chat.png" alt=""/>
               <div className="px-2 py-2">
                 <div className="font-bold text-center text-xl mb-2">Branded Content</div>
@@ -221,7 +248,7 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:scale-110">
+            <div className="md:max-w-sm mx-10 md:mx-2 md:mb-4 rounded overflow-hidden shadow-md  shadow-purple-300  transition duration-500 ease-in-out transform md:hover:scale-110">
               <img className="w-1/4 mx-auto" src="src/assets/puzzle.png" alt=""/>
               <div className="px-2 py-2">
                 <div className="font-bold text-center text-xl mb-2">Content Consulting</div>
@@ -231,6 +258,32 @@ function App() {
               </div>
             </div>
           </div>
+        </section>
+        <section className='work ' >
+          <h1 className="title selection:text-orange-400 mb-8 selection:bg-black my-4 mx-6 text-4xl font-light leading-snug md:leading-none tracking-wide font-yes text-center text-purple-600 md:text-5xl lg:text-6xl ">Oaktree Originals</h1>
+          <div className='grid grid-cols-2 mx-10  mb-6 gap-6 md:grid-cols-3 md:gap-4 md:mx-6'>
+                <div onClick={()=> setShowModal(true)}>
+                  <img src="src/assets/bfc.png" alt="" className='w-4/5 mx-auto work-image rounded-md md:hover:shadow-md md:hover:shadow-blue-950 md:hover:transition duration-500 ease-in-out md:hover:cursor-pointer'/>
+                </div>
+                <div onClick={()=> setShowModal(true)}>
+                  <img src="src/assets/missField.png"  alt="" className='w-4/5 mx-auto work-image rounded-md md:hover:shadow-md md:hover:shadow-blue-950 md:hover:transition duration-500 ease-in-out md:hover:cursor-pointer'/>
+                </div>
+                <div onClick={()=> setShowModal(true)}>
+                  <img src="src/assets/22yarns.jpg" alt="" className='w-4/5 mx-auto work-image rounded-md md:hover:shadow-md md:hover:shadow-blue-950 md:hover:transition duration-500 ease-in-out md:hover:cursor-pointer'/>
+                </div>
+                <div onClick={()=> setShowModal(true)}>
+                  <img src="src/assets/indiaPlays.png" alt="" className='w-4/5 mx-auto work-image rounded-md md:hover:shadow-md md:hover:shadow-blue-950 md:hover:transition duration-500 ease-in-out md:hover:cursor-pointer'/>
+                </div>
+                <div onClick={()=> setShowModal(true)}>
+                  <img src="src/assets/leeLoaded.png" alt="" className='w-4/5 mx-auto work-image rounded-md md:hover:shadow-md md:hover:shadow-blue-950 md:hover:transition duration-500 ease-in-out md:hover:cursor-pointer'/>
+                </div>
+                <div onClick={()=> setShowModal(true)}>
+                  <img src="src/assets/almgk.png" alt="" className='w-4/5   mx-auto work-image  rounded-md md:hover:shadow-md md:hover:shadow-blue-950 md:hover:transition duration-500 ease-in-out md:hover:cursor-pointer'/>
+                </div>
+              </div>
+              <Modal isVisible={showModal} onClose={()=> setShowModal(false)}>
+                
+              </Modal>
 
         </section>
         </div>
